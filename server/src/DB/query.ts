@@ -15,7 +15,7 @@ export const addingToAuditDB = async (activity: string) => {
 export const getAuditDetailsDB = async () => {
   const getDetails = async () => {
     const result = await sql`
-       SELECT * FROM public.auditlogs ORDER BY time ASC;
+       SELECT * FROM public.auditlogs ORDER BY time DESC;
         `;
     return result;
   };
